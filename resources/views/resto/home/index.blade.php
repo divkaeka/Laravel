@@ -1,3 +1,5 @@
+         <!-- DIVA EKA ARYANTI_G.111.21.0021 -->
+        
         @extends('layouts.app')
         @section('content')
         <div class="container">
@@ -6,7 +8,10 @@
         <div class="col-4 pizza-card pizza-primary">
         <div class="row" style="padding-left:5px;padding-right:20px">
         <div class="col">
-        Order bulan ini
+
+
+
+        Order bulan ini  
         </div>
         <div class="col">
         {{ $order_bulan_ini }}
@@ -16,7 +21,9 @@
         <div class="col-4 pizza-card pizza-primary">
         <div class="row" style="padding-left:5px;padding-right:20px">
         <div class="col">
-        Order minggu terakhir
+    
+    
+        Order minggu terakhir 
         </div>
         <div class="col">
         {{ $order_minggu_terakhir }}
@@ -26,18 +33,93 @@
         <div class="col-4 pizza-card pizza-primary">
         <div class="row" style="padding-left:5px;padding-right:20px">
         <div class="col">
+            
+
         Rating
         </div>
         <div class="col">
-        {{ $rating_50 == null ? '-' : number_format($rating_50,2) }}
-        /{{ number_format($rating_semua,2) }}
+        {{ $rating_50 == null ? '-' : number_format($rating_50,2) }}/{{ number_format($rating_semua,2) }}
         </div>
         </div>
         </div>
-        </div>
-        <div class="row">
-        <div class="col-10">&nbsp;</div>
-        <div class="col-2">
+        <div class="col-4 pizza-card pizza-purple pizza-border font-size font-weight">
+        <div class="row" style="padding-left:5px;padding-right:20px">
+        <div class="col">
+
+
+                        Order hari ini  
+                        </div>
+                        <div class="col">
+                        {{ $order_hari_ini }}
+                        </div>
+                        </div>
+                        </div>
+                        <div class="col-4 pizza-card pizza-purple pizza-border font-size font-weight">
+                        <div class="row" style="padding-left:5px;padding-right:20px">
+                        <div class="col">
+
+
+                        Order tahun ini 
+                        </div>
+                        <div class="col">
+                        {{ $order_tahun_ini }}
+                        </div>
+                        </div>
+                        </div>
+                        <div class="col-4 pizza-card pizza-purple pizza-border font-size font-weight">
+                        <div class="row" style="padding-left:5px;padding-right:20px">
+                        <div class="col">
+
+
+                        Order dibatalkan
+                        </div>
+                        <div class="col">
+                        {{ $order_dibatalkan }}
+                        </div>
+                        </div>
+                        </div>
+                        <div class="col-4 pizza-card pizza-pink pizza-border font-size font-stretch">
+                        <div class="row" style="padding-left:5px;padding-right:20px">
+                        <div class="col">
+
+
+
+                        Order setengah hari
+                        </div>
+                        <div class="col">
+                        {{ $order_setengah_hari }}
+                        </div>
+                        </div>
+                        </div>
+                        <div class="col-4 pizza-card pizza-pink pizza-border font-size font-stretch">
+                        <div class="row" style="padding-left:5px;padding-right:20px">
+                        <div class="col">
+                        
+                        Order perhari
+                        </div>
+                        <div class="col">
+                        {{ $order_perhari }}
+                        </div>
+                        </div>
+                        </div>
+                         <div class="col-4 pizza-card pizza-pink pizza-border font-size font-stretch">
+                        <div class="row" style=" padding-left:5px;padding-right:20px">
+                        <div class="col">
+                     
+                      Order perjam 
+                        </div>
+                        <div class="col">
+                        {{ $order_perjam }}
+                        </div>
+                        </div>
+                        </div>
+                        </div>
+                        <div class="row">
+                        <div class="row" style="padding-bottom:0px;padding-top:45px">
+                        <div class="col-10">&nbsp;</div>
+                        <div class="col-2">
+                    
+      
         <form>
         <select name="status_jual" class="form-control"
         onchange="this.form.submit()">
@@ -50,6 +132,7 @@
         </div>
         </div>
         @forelse ($juals as $cur)
+        
         <div class="row">
         <div class="col-12 pizza-card pizza-primary"> 
         Order {{ $cur->id }} ({{ $cur->status_jual }}) 
@@ -103,3 +186,7 @@
         }
         </script>
         @endsection
+
+
+
+

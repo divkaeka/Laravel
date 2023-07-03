@@ -46,8 +46,6 @@ class AlamatKirimController extends Controller
     {
 
 
-
-
         
     }
 
@@ -73,6 +71,7 @@ class AlamatKirimController extends Controller
         //
         $alamat_kirim = AlamatKirim::find($id);
         return view('konsumen.alamatkirim.edit', compact(['alamat_kirim']));
+
 
     }
 

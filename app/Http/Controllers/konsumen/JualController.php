@@ -210,12 +210,12 @@ class JualController extends Controller
                 $alamat_kirim = AlamatKirim::find($jual->alamat_kirim_id); 
                 $kurir = User::find($jual->kurir_id);
                 if($jual==null || count($jual_details)==0){
-                return redirect('/konsumen/home')
-                ->withErrors(['msg' => 'Kode tracking tidak dikenal']);
+                 return redirect('/konsumen/home')
+                 ->withErrors(['msg' => 'Kode tracking tidak dikenal']);
                 }
                 return view('konsumen.jual.track', 
                 compact('jual','jual_details','alamat_kirim','kurir'));
-
+                
                 
         }
 
